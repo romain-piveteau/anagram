@@ -1,8 +1,3 @@
-<form action="#" method="post">
-    Type a word : <input type="text" name="1">
-    Type a number : <input type="number" name="2" style="width: 50px;">
-    <input type="submit" value="Find anagrams">
-</form>
 <?php
 /**
  * @Author: Romain
@@ -34,4 +29,4 @@ function letterCheck($w) {
     }
     return ( isset($a) ) ? ($a) : "\n\tError : Not enough or invalid arguments.\n";
 }
-echo '<pre>', print_r(letterCheck($_POST)), '<pre>';
+echo '<form action="#" method="post">Type a word : <input type="text" name="1">Type a number : <input type="number" name="2" style="width: 50px;"><input type="submit" value="Find anagrams"></form><pre>', print_r(letterCheck($_POST)), '<pre>';
